@@ -2,17 +2,17 @@
 
 Create a file named auth.ts in src/services/ with:
 
-import md5 from 'md5';
+<p>import md5 from 'md5';</p><br>
 
-const timeStamp = new Date().getTime();
-const apikey = 'your_public_key';
-const privateKey = 'your_private_key';
+<p>const timeStamp = new Date().getTime();</p>
+<p>const apikey = 'your_public_key';</p>
+<p>const privateKey = 'your_private_key';</p><br>
 
-export default {
-  ts: timeStamp,
-  apikey,
-  hash: md5(`${timeStamp}${privateKey}${apikey}`),
-};
+<p>export default {</p>
+<p>  ts: timeStamp,</p>
+<p>  apikey,</p>
+<p>  hash: md5(`${timeStamp}${privateKey}${apikey}`),</p>
+<p>};</p>
 
 You can get these keys at https://developer.marvel.com/
 
