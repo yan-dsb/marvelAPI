@@ -1,3 +1,21 @@
+# Authorization
+
+Create a file named auth.ts in src/services/ with:
+
+import md5 from 'md5';
+
+const timeStamp = new Date().getTime();
+const apikey = 'your_public_key';
+const privateKey = 'your_private_key';
+
+export default {
+  ts: timeStamp,
+  apikey,
+  hash: md5(`${timeStamp}${privateKey}${apikey}`),
+};
+
+You can get these keys at https://developer.marvel.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
